@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B168AB8F1F38A3AA0083F9DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168AB8E1F38A3AA0083F9DE /* AppDelegate.swift */; };
-		B168AB911F38A3AA0083F9DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168AB901F38A3AA0083F9DE /* ViewController.swift */; };
+		B168AB911F38A3AA0083F9DE /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168AB901F38A3AA0083F9DE /* PlacesViewController.swift */; };
 		B168AB941F38A3AA0083F9DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B168AB921F38A3AA0083F9DE /* Main.storyboard */; };
 		B168AB961F38A3AA0083F9DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B168AB951F38A3AA0083F9DE /* Assets.xcassets */; };
 		B168AB991F38A3AA0083F9DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B168AB971F38A3AA0083F9DE /* LaunchScreen.storyboard */; };
+		B1CCD2C91F38CB95001FF1F1 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD2C81F38CB95001FF1F1 /* PlacesViewModel.swift */; };
+		B1CCD2CB1F38CD3E001FF1F1 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD2CA1F38CD3E001FF1F1 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B168AB8B1F38A3AA0083F9DE /* GooglePlacesTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B168AB8E1F38A3AA0083F9DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B168AB901F38A3AA0083F9DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B168AB901F38A3AA0083F9DE /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		B168AB931F38A3AA0083F9DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B168AB951F38A3AA0083F9DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B168AB981F38A3AA0083F9DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B168AB9A1F38A3AA0083F9DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1CCD2C81F38CB95001FF1F1 /* PlacesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesViewModel.swift; path = Model/PlacesViewModel.swift; sourceTree = "<group>"; };
+		B1CCD2CA1F38CD3E001FF1F1 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Model/Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		B168AB8D1F38A3AA0083F9DE /* GooglePlacesTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				B1CCD2C71F38C989001FF1F1 /* Model */,
+				B1CCD2C31F38A588001FF1F1 /* Controllers */,
 				B168AB8E1F38A3AA0083F9DE /* AppDelegate.swift */,
-				B168AB901F38A3AA0083F9DE /* ViewController.swift */,
 				B168AB921F38A3AA0083F9DE /* Main.storyboard */,
 				B168AB951F38A3AA0083F9DE /* Assets.xcassets */,
 				B168AB971F38A3AA0083F9DE /* LaunchScreen.storyboard */,
 				B168AB9A1F38A3AA0083F9DE /* Info.plist */,
 			);
 			path = GooglePlacesTestProject;
+			sourceTree = "<group>";
+		};
+		B1CCD2C31F38A588001FF1F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B168AB901F38A3AA0083F9DE /* PlacesViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B1CCD2C71F38C989001FF1F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1CCD2C81F38CB95001FF1F1 /* PlacesViewModel.swift */,
+				B1CCD2CA1F38CD3E001FF1F1 /* Place.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B168AB911F38A3AA0083F9DE /* ViewController.swift in Sources */,
+				B168AB911F38A3AA0083F9DE /* PlacesViewController.swift in Sources */,
+				B1CCD2C91F38CB95001FF1F1 /* PlacesViewModel.swift in Sources */,
 				B168AB8F1F38A3AA0083F9DE /* AppDelegate.swift in Sources */,
+				B1CCD2CB1F38CD3E001FF1F1 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +323,7 @@
 				B168AB9F1F38A3AA0083F9DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

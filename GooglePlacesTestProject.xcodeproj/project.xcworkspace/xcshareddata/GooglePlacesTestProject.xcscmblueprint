@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7E168454839C1064130B64C0C9954BD5CFFEF466",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "55ADDB601B87F45428ADC586574C22B3A1AB4037" : 9223372036854775807,
+    "7E168454839C1064130B64C0C9954BD5CFFEF466" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "23A1C142-20DB-4E2D-A9FE-2234559C7892",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "55ADDB601B87F45428ADC586574C22B3A1AB4037" : "",
+    "7E168454839C1064130B64C0C9954BD5CFFEF466" : "GooglePlacesTest\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GooglePlacesTestProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GooglePlacesTestProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/onix-systems\/kaliapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "55ADDB601B87F45428ADC586574C22B3A1AB4037"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ArtemChaykovsky\/GooglePlacesTest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E168454839C1064130B64C0C9954BD5CFFEF466"
+    }
+  ]
+}
