@@ -17,7 +17,8 @@ class NetworkService {
     static let shared:NetworkService = NetworkService()
 
     func fetchPlaces(searchValue:String,completion:@escaping (Result<Any>)->()) {
-        performRequest(url: baseUrl + "place/autocomplete/json?input=\(searchValue)&key=\(apiKey)" ) { (result) in
+        let escaped = searchValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        performRequest(url: baseUrl + "place/autocomplete/json?input=\(escaped)&key=\(apiKey)" ) { (result) in
             completion(result)
         }
     }

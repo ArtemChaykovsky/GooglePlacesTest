@@ -14,6 +14,7 @@
 		B168AB991F38A3AA0083F9DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B168AB971F38A3AA0083F9DE /* LaunchScreen.storyboard */; };
 		B1CCD2C91F38CB95001FF1F1 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD2C81F38CB95001FF1F1 /* PlacesViewModel.swift */; };
 		B1CCD2CB1F38CD3E001FF1F1 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD2CA1F38CD3E001FF1F1 /* Place.swift */; };
+		B1E3A5931F38F51700CFCBB5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E3A5921F38F51700CFCBB5 /* NetworkService.swift */; };
 		F0314406E654914974D4A4BF /* Pods_GooglePlacesTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D8F22BE5640BB2F629D879 /* Pods_GooglePlacesTestProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		B168AB9A1F38A3AA0083F9DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1CCD2C81F38CB95001FF1F1 /* PlacesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesViewModel.swift; path = Model/PlacesViewModel.swift; sourceTree = "<group>"; };
 		B1CCD2CA1F38CD3E001FF1F1 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Model/Place.swift; sourceTree = "<group>"; };
+		B1E3A5921F38F51700CFCBB5 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Model/Network/NetworkService.swift; sourceTree = "<group>"; };
 		F75715A1584F34A98D9203D1 /* Pods-GooglePlacesTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlacesTestProject/Pods-GooglePlacesTestProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,10 +98,19 @@
 		B1CCD2C71F38C989001FF1F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B1E3A5911F38F26300CFCBB5 /* Network */,
 				B1CCD2C81F38CB95001FF1F1 /* PlacesViewModel.swift */,
 				B1CCD2CA1F38CD3E001FF1F1 /* Place.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		B1E3A5911F38F26300CFCBB5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B1E3A5921F38F51700CFCBB5 /* NetworkService.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		FD59E6D5CB7E0BAD3D63893D /* Frameworks */ = {
@@ -233,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E3A5931F38F51700CFCBB5 /* NetworkService.swift in Sources */,
 				B168AB911F38A3AA0083F9DE /* PlacesViewController.swift in Sources */,
 				B1CCD2C91F38CB95001FF1F1 /* PlacesViewModel.swift in Sources */,
 				B168AB8F1F38A3AA0083F9DE /* AppDelegate.swift in Sources */,
