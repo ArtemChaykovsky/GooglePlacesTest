@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class PlacesViewController: UIViewController {
 
@@ -40,7 +41,9 @@ class PlacesViewController: UIViewController {
     }
 
     fileprivate func getPlaceDetails(_ place:Place) {
+        showHud()
         placesViewModel.getPlaceDetails(place, completion: { [weak self] result in
+            self?.hideHud()
             switch result {
             case .success(details: let placeDetails):
                 self?.pushPlaceDetailsWithPlaceDetails(placeDetails)
@@ -111,11 +114,19 @@ extension PlacesViewController: UITableViewDelegate {
 
 extension UIViewController {
 
-    func showAlert(message: String, title: String = "") {
+    fileprivate func showAlert(message: String, title: String = "") {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
+    }
+
+    fileprivate func showHud() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+    }
+
+    fileprivate func hideHud() {
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
 }
 

@@ -54,6 +54,7 @@ extension PlaceDetailsViewController: UITableViewDataSource {
 }
 
 extension PlaceDetailsViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row < 3 {
             return UITableViewAutomaticDimension
