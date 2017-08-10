@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13DD2561F3A482600DD771C /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DD2551F3A482600DD771C /* PlaceDetails.swift */; };
+		B13DD2581F3A5BDF00DD771C /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DD2571F3A5BDF00DD771C /* PlaceDetailsViewController.swift */; };
+		B13DD25A1F3A5C6500DD771C /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DD2591F3A5C6500DD771C /* PlacesViewController.swift */; };
+		B13DD25D1F3A767D00DD771C /* PlacePhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DD25C1F3A767D00DD771C /* PlacePhotoTableViewCell.swift */; };
 		B168AB8F1F38A3AA0083F9DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168AB8E1F38A3AA0083F9DE /* AppDelegate.swift */; };
-		B168AB911F38A3AA0083F9DE /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168AB901F38A3AA0083F9DE /* PlacesViewController.swift */; };
 		B168AB941F38A3AA0083F9DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B168AB921F38A3AA0083F9DE /* Main.storyboard */; };
 		B168AB961F38A3AA0083F9DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B168AB951F38A3AA0083F9DE /* Assets.xcassets */; };
 		B168AB991F38A3AA0083F9DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B168AB971F38A3AA0083F9DE /* LaunchScreen.storyboard */; };
@@ -21,9 +24,12 @@
 /* Begin PBXFileReference section */
 		32CE7A3E0B348345E033FEF9 /* Pods-GooglePlacesTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlacesTestProject/Pods-GooglePlacesTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		60D8F22BE5640BB2F629D879 /* Pods_GooglePlacesTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooglePlacesTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13DD2551F3A482600DD771C /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDetails.swift; path = Model/PlaceDetails.swift; sourceTree = "<group>"; };
+		B13DD2571F3A5BDF00DD771C /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDetailsViewController.swift; path = Controllers/PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		B13DD2591F3A5C6500DD771C /* PlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesViewController.swift; path = Controllers/PlacesViewController.swift; sourceTree = "<group>"; };
+		B13DD25C1F3A767D00DD771C /* PlacePhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacePhotoTableViewCell.swift; path = Views/PlacePhotoTableViewCell.swift; sourceTree = "<group>"; };
 		B168AB8B1F38A3AA0083F9DE /* GooglePlacesTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B168AB8E1F38A3AA0083F9DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B168AB901F38A3AA0083F9DE /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		B168AB931F38A3AA0083F9DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B168AB951F38A3AA0083F9DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B168AB981F38A3AA0083F9DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +61,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B13DD25B1F3A763900DD771C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B13DD25C1F3A767D00DD771C /* PlacePhotoTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		B168AB821F38A3A90083F9DE = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +90,7 @@
 		B168AB8D1F38A3AA0083F9DE /* GooglePlacesTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				B13DD25B1F3A763900DD771C /* Views */,
 				B1CCD2C71F38C989001FF1F1 /* Model */,
 				B1CCD2C31F38A588001FF1F1 /* Controllers */,
 				B168AB8E1F38A3AA0083F9DE /* AppDelegate.swift */,
@@ -90,7 +105,8 @@
 		B1CCD2C31F38A588001FF1F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B168AB901F38A3AA0083F9DE /* PlacesViewController.swift */,
+				B13DD2591F3A5C6500DD771C /* PlacesViewController.swift */,
+				B13DD2571F3A5BDF00DD771C /* PlaceDetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -101,6 +117,7 @@
 				B1E3A5911F38F26300CFCBB5 /* Network */,
 				B1CCD2C81F38CB95001FF1F1 /* PlacesViewModel.swift */,
 				B1CCD2CA1F38CD3E001FF1F1 /* Place.swift */,
+				B13DD2551F3A482600DD771C /* PlaceDetails.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -244,8 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13DD2561F3A482600DD771C /* PlaceDetails.swift in Sources */,
+				B13DD25A1F3A5C6500DD771C /* PlacesViewController.swift in Sources */,
+				B13DD25D1F3A767D00DD771C /* PlacePhotoTableViewCell.swift in Sources */,
 				B1E3A5931F38F51700CFCBB5 /* NetworkService.swift in Sources */,
-				B168AB911F38A3AA0083F9DE /* PlacesViewController.swift in Sources */,
+				B13DD2581F3A5BDF00DD771C /* PlaceDetailsViewController.swift in Sources */,
 				B1CCD2C91F38CB95001FF1F1 /* PlacesViewModel.swift in Sources */,
 				B168AB8F1F38A3AA0083F9DE /* AppDelegate.swift in Sources */,
 				B1CCD2CB1F38CD3E001FF1F1 /* Place.swift in Sources */,

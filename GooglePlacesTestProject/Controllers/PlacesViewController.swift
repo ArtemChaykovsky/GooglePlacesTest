@@ -18,7 +18,7 @@ class PlacesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.tableFooterView = UIView();
+        self.tableView.tableFooterView = UIView()
         placesViewModel.onPlacesReceived = { [weak self] result in
             switch result {
             case .success:
@@ -30,8 +30,31 @@ class PlacesViewController: UIViewController {
         }
     }
 
-    func performSearch(text:String) {
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         self.navigationController?.navigationBar.isHidden = true
+    }
+
+    fileprivate func performSearch(text:String) {
         self.placesViewModel.searchBarDidChange(text:text)
+    }
+
+    fileprivate func getPlaceDetails(_ place:Place) {
+        placesViewModel.getPlaceDetails(place, completion: { [weak self] result in
+            switch result {
+            case .success(details: let placeDetails):
+                self?.pushPlaceDetailsWithPlaceDetails(placeDetails)
+                break
+            case .failure(message: let error):
+                self?.showAlert(message: error, title: "Error")
+                break
+            }
+        })
+    }
+
+    fileprivate func pushPlaceDetailsWithPlaceDetails(_ placeDetails: PlaceDetails) {
+        let placeDetailsVC = PlaceDetailsViewController.newDetailsVCWithPlaceDetails(placeDetails)
+        self.navigationController?.pushViewController(placeDetailsVC, animated: true)
     }
 }
 
@@ -80,6 +103,9 @@ extension PlacesViewController: UITableViewDataSource {
 extension PlacesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if let place = placesViewModel.placeAtIndex(indexPath.row) {
+            self.getPlaceDetails(place)
+        }
     }
 }
 

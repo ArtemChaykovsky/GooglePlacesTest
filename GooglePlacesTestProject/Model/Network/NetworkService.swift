@@ -23,9 +23,16 @@ class NetworkService {
         }
     }
 
+    func getPlaceDetais(_ place:Place, completion:@escaping (Result<Any>)->()) {
+        performRequest(url: baseUrl + "place/details/json?placeid=\(place.place_id ?? "")&key=\(apiKey)") { (result) in
+            completion(result)
+        }
+    }
+
     fileprivate func performRequest(url:String,completion:@escaping (Result<Any>)->()) {
         Alamofire.request(url).responseJSON { (response) in
-            completion(response.result) }
+            completion(response.result)
+        }
     }
 
     func cancelAll() {
